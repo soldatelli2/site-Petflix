@@ -1,21 +1,112 @@
-.splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+body {
+    background: linear-gradient(to top, rgb(43, 0, 59), rgb(130, 1, 129));
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, rgb(21, 1, 29), purple);
-    z-index: 1000;
-}
-
-.main-content {
-    display: flex;
-}
-
-body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    overflow: hidden;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo,
+.catalogo,
+.texto-logo {
+    position: absolute;
+    transition: opacity 1s, transform 1s;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    background: url('./Imagens/logo-icon.png') no-repeat center center;
+    background-size: contain;
+    opacity: 1;
+    transform: translateX(100vw);
+}
+
+.texto-logo {
+    width: 1000px;
+    height: auto; 
+    top: 25%;
+    left: 25%;
+    position: absolute;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.texto-logo img {
+    width: 700px;
+}
+
+.catalogo {
+    display: none;
+    width: 98%;
+    height: 98%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    opacity: 0;
+    transform: translateX(100vw);
+}
+
+.catalogo .filmes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+.catalogo .filmes img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.5s;
+    box-shadow: 8px 8px 10px rgba(29, 29, 29, 0.7);
+}
+
+.catalogo .filmes img:hover {
+    transform: scale(1.1);
+}
+
+.area-texto-catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-texto-catalogo span {
+    font-size: 28px;
+}
+
+.area-texto-catalogo img {
+    margin: 10px;
+}
+
+.area-texto-catalogo .img-texto {
+    width: 450px;
+}
+
+.area-texto-catalogo .img-contador {
+    width: 250px;
+}
+
+.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-out {
+    transform: translateX(-100vw);
+    opacity: 0;
 }

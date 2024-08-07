@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetFlix</title>
     <link rel="stylesheet" href="style.css">
+    <title>PETFLIX</title>
 </head>
 <body>
-    <div id="splash-screen" class="splash-screen">
-        <img src="./Imagens/logo-icon.png" alt="Logo" width="300" height="300">
-    </div>
-    <div id="main-content" class="main-content">
-        <h1>Tela Principal</h1>
+    <div class="container">
+        <div class="logo"></div>
+        <div class="texto-logo"><img src="Imagens/texto-logo-icon.png" alt="PETFLIX Logo" id="petflixLogo"/></div>
+        <div class="catalogo">
+            <div class="area-texto-catalogo">
+                <img class="img-texto" src="./Imagens/texto-catalogo.png">
+                <img class="img-contador" src="./Imagens/texto-contador.png">
+                <div class="contador">
+                    <span id="contador">5</span> <span>segundos</span>
+                </div>
+            </div>
+            <div class="filmes">
+                <img src="./imagens/bolt.png" alt="BOLT">
+                <img src="./imagens/segredoanimais.png" alt="SEGREDO DOS ANIMAIS">
+                <img src="./imagens/Scooby.png" alt="SCOOBY DOO">
+                <img src="./imagens/semfloresta.png" alt="OS SEM FLORESTA">
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
